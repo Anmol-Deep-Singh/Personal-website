@@ -1,0 +1,99 @@
+#root {
+  margin: 0 ;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0%;
+  font-weight: lighter;
+  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+:root{
+  --backgound_dark : rgb(10,10,10);
+  --backgound_white : rgb(250,250,250);
+  --backgound_lightgrey : rgb(163,163,163);
+}
+*{
+  text-align: center;
+  box-sizing: border-box;
+}
+#light{
+  background-color: var(--backgound_white);
+  color: var(--backgound_dark);
+  --border_color:var(--backgound_dark);
+  --backgound_color:var(--backgound_white)
+}
+#dark{
+  background-color: var(--backgound_dark);
+  color: var(--backgound_white);
+  --border_color:var(--backgound_white);
+  --backgound_color:var(--backgound_dark)
+}
+.page{
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+  top: 0px;
+  left: 0px;
+}
+.navbar{
+  background-color: rgba(--backgound_color,0.6);
+  width: 100%;
+  height: 3.5625rem;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  backdrop-filter: blur(8px); 
+}
+
+.navbar button{
+  height: 100%;
+}
+.name-but{
+  font-size: 20px;
+  margin-left: 67px;
+}
+
+.navs-but{
+  margin-right: 3.125rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-right: 67px;
+}
+.navs-but button{
+  font-weight: bold;
+  height: 36px;
+  font-size: 14px;
+  margin-left: 14px;
+}
+
+.footer{
+  background-color: transparent;
+  width: 80%;
+  height: 4.313rem;
+  bottom: 0px;
+  padding: 24px 0px;
+}
+.footer p{
+  text-align: start;
+  width: 100%;
+  margin-left: 70px;
+}
+.page{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.skills-section{
+  height: 330px;
+  width: 100%;
+  background-color: transparent;
+  padding: 48px 0px;
+}

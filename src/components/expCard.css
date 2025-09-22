@@ -1,0 +1,48 @@
+.Expcard{
+    background-color: transparent;
+    width: 100%;
+    border: 2px solid black;
+}
+.upper{
+    width: 100%;
+    padding: 24px;
+}
+.upper h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.upper h4{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.lower{
+    width: 100%;
+    padding: 16px 24px 24px;
+}
+.role{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.project-card{
+    padding: 24px;
+    height: 336px;
+    width: 270px;
+    background-color: transparent;
+    word-wrap: break-word;   /* forces long words to wrap */
+    white-space: normal;     /* ensures text goes to next line */
+    overflow-wrap: break-word; 
+}
+.project-card p{
+    text-align: justify;
+}
+.title{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* padding-bottom: 24px; */
+}

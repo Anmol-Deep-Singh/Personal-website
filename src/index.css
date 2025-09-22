@@ -1,0 +1,30 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  --bg-color:black;
+  --text-color:white;
+}
+
+
+body {
+  margin: 0;
+  display: block;
+  color: var(--text-color);
+  padding: 0;          /* remove default padding */
+  width: 100%;        /* full viewport width */
+  min-height: 100vh;   /* full viewport height */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+}

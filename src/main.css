@@ -1,0 +1,56 @@
+.main{
+    background-color: transparent;
+    flex: 1;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 54.313rem;
+}
+
+.about-section{
+    background-color: transparent;
+    width: 54.313rem;
+}
+
+.trasnform-div{
+    width: 100%;
+    background-color: transparent;
+}
+.para{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.about-section p{
+    width: 672px;
+    height: 112px;
+}
+.go-buttons{
+    background-color: transparent;
+    width: 100%;
+    height: 30px;
+}
+.experince-section{
+    width: 100%;
+}
+.project-constainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow-x: scroll;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 54.313rem;
+}
+.lets-connect{
+    width : 100%;
+    height: 216px;
+    padding: 48px 0px;
+    background-color: transparent;
+}
