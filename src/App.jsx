@@ -2,7 +2,7 @@ import './App.css'
 import './main.css'
 import React, { useState, useEffect } from 'react'
 import ExpCard from './components/ExpCard.jsx'
-import ProjectCard from './components/projectCard.jsx'
+import ProjectCard from './components/ProjectCard.jsx'
 import {projectData,experienceData,skillsData} from './components/data/data.js'
 
 function App() {
