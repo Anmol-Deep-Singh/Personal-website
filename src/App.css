@@ -27,7 +27,7 @@
   --backgound_color:var(--backgound_white);
   --background_expcard:var(--backround_expcard_light);
   --border_expcard:var(--backround_expcard_light);
-
+  --font_color:var(--backgound_dark);
 }
 #dark{
   background-color: var(--backgound_dark);
@@ -36,6 +36,7 @@
   --backgound_color:var(--backgound_dark);
   --background_expcard:var(--backround_expcard_dark);
   --border_expcard:var(--backround_expcard_dark);
+  --font_color:var(--backgound_white);
 }
 .page{
   min-height: 100%;
@@ -159,4 +160,47 @@
   box-shadow: 
     0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px -1px rgba(0, 0, 0, 0.1);    
+}
+.project-container{ 
+  display: flex;
+  flex-direction: row; 
+  justify-content: start;
+  overflow-x: auto;          /* allow horizontal scroll */
+  overflow-y: hidden;        /* block vertical scroll */
+  white-space: nowrap;       /* keep items in a row */
+  -ms-overflow-style: none;  /* IE, Edge */
+  scrollbar-width: none;    
+}
+.lets-connect{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lets-connect h2{
+  font-size: 32px;
+}
+.lets-connect-btn{
+  height: 48px;
+  width: 248px;
+  background-color: var(--font_color);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.lets-connect-btn p{
+  color: var(--backgound_color);
+  font-size: 16px;
+  margin-left: 10px;
+}
+#logo-opp{
+  color: var(--backgound_color);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

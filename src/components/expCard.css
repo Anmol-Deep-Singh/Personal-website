@@ -34,16 +34,19 @@
     justify-content: space-between;
 }
 .project-card{
-    padding: 24px;
+    padding: 0px 24px 24px 24px;
     height: 336px;
     width: 270px;
     background-color: transparent;
     word-wrap: break-word;   /* forces long words to wrap */
     white-space: normal;     /* ensures text goes to next line */
     overflow-wrap: break-word; 
+    border: 1px solid var(--background_expcard);
+    border-radius: 8px;
 }
 .project-card p{
     text-align: justify;
+    font-size: 18px;
 }
 .title{
     background-color: transparent;
@@ -52,4 +55,7 @@
     flex-direction: row;
     justify-content: space-between;
     /* padding-bottom: 24px; */
+}
+.project_title{
+    font-size: 24px;
 }

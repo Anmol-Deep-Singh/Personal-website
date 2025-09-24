@@ -7,6 +7,7 @@
     justify-content: start;
     align-items: center;
     width: 54.313rem;
+    padding: 48px 16px;
 }
 
 .about-section{
@@ -37,16 +38,21 @@
 .experince-section{
     width: 100%;
 }
-.project-constainer{
+.project-container{
     display: flex;
     flex-direction: row;
     justify-content: start;
     overflow-x: scroll;
-    gap: 10px;
+    gap: 20px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
     width: 54.313rem;
+    overflow-x: auto;          /* allow horizontal scroll */
+    overflow-y: hidden;        /* block vertical scroll */
+    white-space: nowrap;       /* keep items in a row */
+    -ms-overflow-style: none;  /* IE, Edge */
+    scrollbar-width: none;     /* Firefox */  
 }
 .lets-connect{
     width : 100%;

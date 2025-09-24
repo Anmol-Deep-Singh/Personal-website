@@ -1,16 +1,15 @@
 import './App.css'
 import './main.css'
 import React, { useState, useEffect } from 'react'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope,faMoon } from '@fortawesome/free-solid-svg-icons';
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
+
+import {projectData,experienceData,skillsData} from './components/data/data.js'
 import ExpCard from './components/ExpCard.jsx'
 import ProjectCard from './components/ProjectCard.jsx'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faSun } from '@fortawesome/free-solid-svg-icons';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
-import {projectData,experienceData,skillsData} from './components/data/data.js'
-import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -67,7 +66,7 @@ function App() {
           </div>
           <div className="project-section">
             <h2>Projects</h2>
-            <div className="project-constainer">
+            <div className="project-container">
               <ProjectCard/>
               <ProjectCard/>
               <ProjectCard/>
@@ -80,7 +79,7 @@ function App() {
           </div>
           <div className="lets-connect">
             <h2>Let's Connect</h2>
-            <button>LINDIIM</button>
+            <button className='lets-connect-btn'><FontAwesomeIcon icon={faLinkedin} id="logo-opp"/><p>Connect on LinkedIn</p></button>
           </div>
         </div>
         </div>
