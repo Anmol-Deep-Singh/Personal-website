@@ -7,7 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import {projectData,experienceData,skillsData} from './components/data/data.js'
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -25,8 +28,11 @@ function App() {
           <button>Skills</button>
           <button>Experience</button>
           <button>Projects</button>
-          <button onClick={()=>{
-            setTheme(theme => theme === "dark" ? "light" : "dark")}}>T</button>
+          <button onClick={() => setTheme(theme => theme === "dark" ? "light" : "dark")}>
+            {theme === "dark"
+              ? <FontAwesomeIcon icon={faMoon} id="logo" />
+              : <WbSunnyOutlinedIcon id="logo" />}
+          </button>
         </div>
       </div>
       <div className={`page`} >
@@ -73,7 +79,7 @@ function App() {
             </div>
           </div>
           <div className="lets-connect">
-            <h2>LETS CONNECT</h2>
+            <h2>Let's Connect</h2>
             <button>LINDIIM</button>
           </div>
         </div>
