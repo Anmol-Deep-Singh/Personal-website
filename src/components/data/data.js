@@ -14,11 +14,7 @@ const experienceData = [
 ]
 
 const skillsData = [
-    {
-        title:"Healix",
-        about:"AI Health care system",
-        github:"hello"
-    }
+    "Python", "JavaScript", "TypeScript", "SQL", "React", "Next.js", "FastAPI", "Tailwind CSS", "Node.js", "Django", "MongoDB", "PostgreSQL", "Redis", "AWS", "Vector Databases", "LLMs", "RAG", "LangChain", "LangGraph"
 ]
 
 export {

@@ -3,6 +3,10 @@ import './main.css'
 import React, { useState, useEffect } from 'react'
 import ExpCard from './components/ExpCard.jsx'
 import ProjectCard from './components/ProjectCard.jsx'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {projectData,experienceData,skillsData} from './components/data/data.js'
 
 function App() {
@@ -35,9 +39,9 @@ function App() {
               <p>Passionate about leveraging AI to enhance productivity and solve complex problems. Experienced in building innovative AI-powered solutions, optimizing RAG pipelines, and developing full-stack applications. Always eager to take on new challenges and improve my skills daily.</p>
             </div>
             <div className="go-buttons">
-              <button>Github</button>
-              <button>Lindim</button>
-              <button>email</button>
+              <button><FontAwesomeIcon icon={faGithub} id="logo"/>Github</button>
+              <button><FontAwesomeIcon icon={faLinkedin}id="logo"/>Linkedin</button>
+              <button><FontAwesomeIcon icon={faEnvelope}id="logo"/>Email</button>
             </div>
           </div>
           <div className="experince-section">
@@ -49,7 +53,11 @@ function App() {
           </div>
           <div className="skills-section">
             <h2>Skills</h2>
-            <div className="skill-card">ReactsJs</div>
+            <div className="skills-container">
+              {skillsData.map((skill, index) => (
+                <div className="skill-card" key={index}>{skill}</div>
+              ))}
+            </div>
           </div>
           <div className="project-section">
             <h2>Projects</h2>
