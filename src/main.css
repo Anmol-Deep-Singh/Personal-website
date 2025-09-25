@@ -8,6 +8,7 @@
     align-items: center;
     width: 54.313rem;
     padding: 48px 16px;
+    overflow-x: hidden;
 }
 
 .about-section{

@@ -167,7 +167,7 @@
   overflow-x: auto;          /* allow horizontal scroll */
   overflow-y: hidden;        /* block vertical scroll */
   white-space: nowrap;       /* keep items in a row */
-  -ms-overflow-style: none;  /* IE, Edge */
+  -ms-overflow-style: none;  
   scrollbar-width: none;    
   padding: 10px;
 }
