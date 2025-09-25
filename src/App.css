@@ -6,6 +6,8 @@
   --border_dark:rgba(229,229,229,0.3);
   --background_expcard_light:#F5F5F5;
   --background_expcard_dark:#262626;
+  --hover-light:#adadadfd;
+  --hover-dark:#303030;
 }
 *{
   text-align: center;
@@ -20,6 +22,7 @@
   --background_expcard:var(--background_expcard_light);
   --border_expcard:var(--background_expcard_dark);
   --font_color:var(--background_dark);
+  --hover:var(--hover-dark);
 }
 #dark{
   background-color: var(--background_dark);
@@ -29,6 +32,7 @@
   --background_expcard:var(--background_expcard_dark);
   --border_expcard:var(--background_expcard_light);
   --font_color:var(--background_white);
+  --hover:var(--hover-light);
 }
 .page{
   min-height: 100%;
@@ -162,6 +166,7 @@
   white-space: nowrap;       /* keep items in a row */
   -ms-overflow-style: none;  /* IE, Edge */
   scrollbar-width: none;    
+  padding: 10px;
 }
 .lets-connect{
   display: flex;
@@ -199,7 +204,9 @@
 .Anmol{
   font-size: 3.75rem;
   font-weight: 700;
-  color: pink;
+  background: linear-gradient(90deg, #d66efd, #e649a2, #d63384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .trasnform-div {
   position: absolute;
@@ -213,6 +220,9 @@
   opacity: 1;
   transform: translateY(0);
   will-change: opacity, transform;
+  background: linear-gradient(90deg, #4facfe, #00f2fe, #43e97b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
 }
 
 .trasnform-div.leave {
@@ -232,7 +242,25 @@
     transform: translateY(0) scaleY(1);
   }
 }
+#zoom-box {
+  cursor: pointer;
+  transition: transform 0.3s ease-out; /* smooth both in & out */
+}
 
+#zoom-box:hover {
+  transform: scale(1.01); /* 1% bigger */
+}
+#zoom-box2 {
+  cursor: pointer;
+  transition: transform 0.3s ease-out; /* smooth both in & out */
+}
+
+#zoom-box2:hover {
+  transform: scale(1.04); /* 1% bigger */
+}
+.lets-connect-btn:hover{
+  background-color: var(--hover);
+}
 /* 
 #light .Expcard,
 #light .project-card,

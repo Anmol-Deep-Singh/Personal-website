@@ -59,7 +59,7 @@ function App() {
       <div className={`page`} >
         <div className="main">
           <div className="about-section">
-            <h1>Hello,I'm</h1>
+            <h1 className='hello'>Hello,I'm</h1>
             <h1 className='Anmol'>Anmoldeep Singh</h1>
             <div style={{ position: "relative", height: "3.5rem", overflow: "hidden" }}>
               <span
@@ -93,7 +93,7 @@ function App() {
             <h2>Skills</h2>
             <div className="skills-container">
               {skillsData.map((skill, index) => (
-                <div className="skill-card" key={index}>{skill}</div>
+                <div className="skill-card" id='zoom-box2' key={index}>{skill}</div>
               ))}
             </div>
           </div>
@@ -107,7 +107,7 @@ function App() {
           </div>
           <div className="lets-connect titles">
             <h2>Let's Connect</h2>
-            <button className='lets-connect-btn' onClick={()=>{window.open("https://www.linkedin.com/in/anmoldeep-singh-066526202/?trk=public-profile-join-page", "_blank")}}><FontAwesomeIcon icon={faLinkedin} id="logo-opp"/><p>Connect on LinkedIn</p></button>
+            <button className='lets-connect-btn' id='zoom-box2' onClick={()=>{window.open("https://www.linkedin.com/in/anmoldeep-singh-066526202/?trk=public-profile-join-page", "_blank")}}><FontAwesomeIcon icon={faLinkedin} id="logo-opp"/><p>Connect on LinkedIn</p></button>
           </div>
         </div>
         </div>

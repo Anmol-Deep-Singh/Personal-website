@@ -5,7 +5,7 @@ import './expCard.css'
 
 const ProjectCard = ({title,about,github}) => {
   return (
-    <div className="project-card">
+    <div className="project-card" id='zoom-box'>
         <div className="title">
             <h3 className='project_title'>{title}</h3>
             <button onClick={()=>{window.open(github, "_blank")}}><FontAwesomeIcon icon={faUpRightFromSquare} id="logo"/></button>
