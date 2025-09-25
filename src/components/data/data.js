@@ -1,15 +1,19 @@
+import { Link } from "@mui/icons-material"
+
 const projectData = [
     {
         title:"Healix",
         about:"AI Health care system",
-        github:"hello"
+        github:"https://www.google.com"
     }
 ]
 const experienceData = [
     {
-        title:"Healix",
-        about:"AI Health care system",
-        github:"hello"
+        positon:"Intern",
+        date:"20 November",
+        link:"https://www.google.com",
+        comany:"GMetri",
+        about:"frontend work"
     }
 ]
 

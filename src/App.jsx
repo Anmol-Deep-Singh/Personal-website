@@ -11,11 +11,33 @@ import {projectData,experienceData,skillsData} from './components/data/data.js'
 import ExpCard from './components/ExpCard.jsx'
 import ProjectCard from './components/ProjectCard.jsx'
 
+const titles = [
+  "Software Engineer",
+  "AI Engineer",
+  "Cloud Engineer"
+];
+
 function App() {
   const [theme, setTheme] = useState("dark");
+  const [currentTitle, setCurrentTitle] = useState(0);
+  const [nextTitle, setNextTitle] = useState(1);
+  const [isLeaving, setIsLeaving] = useState(false);
+
   useEffect(() => {
     document.body.id = theme;
   }, [theme]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsLeaving(true);
+      setTimeout(() => {
+        setCurrentTitle(nextTitle);
+        setNextTitle((nextTitle + 1) % titles.length);
+        setIsLeaving(false);
+      }, 1000); // 1 second for animation
+    }, 5000); // 5 seconds between switches
+    return () => clearInterval(interval);
+  }, [nextTitle]);
 
   return (
     <>
@@ -38,23 +60,34 @@ function App() {
         <div className="main">
           <div className="about-section">
             <h1>Hello,I'm</h1>
-            <h1>Anmoldeep Singh</h1>
-            <div className="trasnform-div">Software Engineer </div>
+            <h1 className='Anmol'>Anmoldeep Singh</h1>
+            <div style={{ position: "relative", height: "3.5rem", overflow: "hidden" }}>
+              <span
+                className={`trasnform-div ${isLeaving ? "leave" : ""}`}
+                key={currentTitle}
+              >
+                {titles[currentTitle]}
+              </span>
+              {isLeaving && (
+                <span className="trasnform-div enter" key={nextTitle}>
+                  {titles[nextTitle]}
+                </span>
+              )}
+            </div>
             <div className="para">
               <p>Passionate about leveraging AI to enhance productivity and solve complex problems. Experienced in building innovative AI-powered solutions, optimizing RAG pipelines, and developing full-stack applications. Always eager to take on new challenges and improve my skills daily.</p>
             </div>
             <div className="go-buttons">
-              <button><FontAwesomeIcon icon={faGithub} id="logo"/>Github</button>
-              <button><FontAwesomeIcon icon={faLinkedin}id="logo"/>Linkedin</button>
-              <button><FontAwesomeIcon icon={faEnvelope}id="logo"/>Email</button>
+              <button onClick={()=>{window.open("https://github.com/Anmol-Deep-Singh", "_blank")}}><FontAwesomeIcon icon={faGithub} id="logo"/>Github</button>
+              <button onClick={()=>{window.open("https://www.linkedin.com/in/anmoldeep-singh-066526202/?trk=public-profile-join-page", "_blank")}}><FontAwesomeIcon icon={faLinkedin}id="logo"/>Linkedin</button>
+              <button onClick={()=>{window.open("https://www.linkedin.com/in/anmoldeep-singh-066526202/?trk=public-profile-join-page", "_blank")}}><FontAwesomeIcon icon={faEnvelope}id="logo"/>Email</button>
             </div>
           </div>
           <div className="experince-section">
-            <h2>Expperince</h2>
-            <ExpCard/>
-            <ExpCard/>
-            <ExpCard/>
-            <ExpCard/>
+            <h2 className='titles'>Experience</h2>
+            {experienceData.map((exp, index) => (
+                <ExpCard key={index} positon={exp.positon} date={exp.date} link={exp.link} company={exp.comany} about={exp.about}/>
+            ))}
           </div>
           <div className="skills-section">
             <h2>Skills</h2>
@@ -65,21 +98,16 @@ function App() {
             </div>
           </div>
           <div className="project-section">
-            <h2>Projects</h2>
+            <h2 className='titles'>Projects</h2>
             <div className="project-container">
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>
-              <ProjectCard/>          
+            {projectData.map((Data, index) => (
+                <ProjectCard key={index} title={Data.title} about={Data.about} github={Data.github}/>
+              ))}                  
             </div>
           </div>
-          <div className="lets-connect">
+          <div className="lets-connect titles">
             <h2>Let's Connect</h2>
-            <button className='lets-connect-btn'><FontAwesomeIcon icon={faLinkedin} id="logo-opp"/><p>Connect on LinkedIn</p></button>
+            <button className='lets-connect-btn' onClick={()=>{window.open("https://www.linkedin.com/in/anmoldeep-singh-066526202/?trk=public-profile-join-page", "_blank")}}><FontAwesomeIcon icon={faLinkedin} id="logo-opp"/><p>Connect on LinkedIn</p></button>
           </div>
         </div>
         </div>

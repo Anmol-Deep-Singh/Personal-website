@@ -1,19 +1,11 @@
-#root {
-  margin: 0 ;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 0%;
-  font-weight: lighter;
-  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-}
 :root{
-  --backgound_dark : rgb(10,10,10);
-  --backgound_white : rgb(250,250,250);
-  --backgound_lightgrey : rgb(163,163,163);
+  --background_dark : rgb(10,10,10);
+  --background_white : rgb(250,250,250);
+  --background_lightgrey : rgb(163,163,163);
   --border_light:rgba(38,38,38,0.3);
   --border_dark:rgba(229,229,229,0.3);
-  --backround_expcard_light:#F5F5F5;
-  --backround_expcard_dark:#262626;
+  --background_expcard_light:#F5F5F5;
+  --background_expcard_dark:#262626;
 }
 *{
   text-align: center;
@@ -21,22 +13,22 @@
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 #light{
-  background-color: var(--backgound_white);
-  color: var(--backgound_dark);
+  background-color: var(--background_white);
+  color: var(--background_dark);
   --border_color:var(--border_light);
-  --backgound_color:var(--backgound_white);
-  --background_expcard:var(--backround_expcard_light);
-  --border_expcard:var(--backround_expcard_light);
-  --font_color:var(--backgound_dark);
+  --background_color:var(--background_white);
+  --background_expcard:var(--background_expcard_light);
+  --border_expcard:var(--background_expcard_dark);
+  --font_color:var(--background_dark);
 }
 #dark{
-  background-color: var(--backgound_dark);
-  color: var(--backgound_white);
+  background-color: var(--background_dark);
+  color: var(--background_white);
   --border_color:var(--border_dark);
-  --backgound_color:var(--backgound_dark);
-  --background_expcard:var(--backround_expcard_dark);
-  --border_expcard:var(--backround_expcard_dark);
-  --font_color:var(--backgound_white);
+  --background_color:var(--background_dark);
+  --background_expcard:var(--background_expcard_dark);
+  --border_expcard:var(--background_expcard_light);
+  --font_color:var(--background_white);
 }
 .page{
   min-height: 100%;
@@ -59,7 +51,7 @@
   justify-content: space-between;
   backdrop-filter: blur(8px); 
   border-bottom: 1px solid var(--border_color);
-
+  z-index: 2;
 }
 
 .navbar button{
@@ -191,12 +183,12 @@
   align-items: center;
 }
 .lets-connect-btn p{
-  color: var(--backgound_color);
+  color: var(--background_expcard);
   font-size: 16px;
   margin-left: 10px;
 }
 #logo-opp{
-  color: var(--backgound_color);
+  color: var(--background_expcard);
   height: 30px;
   width: 30px;
   display: flex;
@@ -204,3 +196,73 @@
   justify-content: center;
   align-items: center;
 }
+.Anmol{
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: pink;
+}
+.trasnform-div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transform: translateY(0);
+  will-change: opacity, transform;
+}
+
+.trasnform-div.leave {
+  opacity: 0;
+  transform: translateY(-40px) scaleY(0.8);
+}
+
+.trasnform-div.enter {
+  opacity: 0;
+  transform: translateY(40px) scaleY(0.8);
+  animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+/* 
+#light .Expcard,
+#light .project-card,
+#light .skill-card {
+  box-shadow: 0 2px 8px rgba(38, 38, 38, 0.10), 0 1.5px 4px rgba(38, 38, 38, 0.08);
+}
+
+
+#dark .Expcard,
+#dark .project-card,
+#dark .skill-card {
+  box-shadow: 0 2px 8px rgba(229, 229, 229, 0.10), 0 1.5px 4px rgba(229, 229, 229, 0.08);
+}
+
+
+#light .project-card {
+  box-shadow: 0 4px 24px 0 rgba(38, 38, 38, 0.18), 0 0px 0px 2px rgba(38, 38, 38, 0.12);
+}
+
+
+#dark .project-card {
+  box-shadow: 0 4px 24px 0 rgba(229, 229, 229, 0.22), 0 0px 0px 2px rgba(229, 229, 229, 0.14);
+}
+
+
+#light .Expcard,
+#light .skill-card {
+  box-shadow: 0 2px 12px 0 rgba(38, 38, 38, 0.16), 0 0px 0px 1px rgba(38, 38, 38, 0.10);
+}
+#dark .Expcard,
+#dark .skill-card {
+  box-shadow: 0 2px 12px 0 rgba(229, 229, 229, 0.18), 0 0px 0px 1px rgba(229, 229, 229, 0.12);
+} */
