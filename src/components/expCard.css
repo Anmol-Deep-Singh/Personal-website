@@ -2,6 +2,7 @@
   --background_dark : rgb(10,10,10);
   --background_white : rgb(250,250,250);
   --background_lightgrey : rgb(163,163,163);
+  --background_darkgrey : rgb(115,115,115);
   --border_light:rgba(38,38,38,0.3);
   --border_dark:rgba(229,229,229,0.3);
   --background_expcard_light:#F5F5F5;
@@ -20,6 +21,7 @@
   --background_expcard:var(--background_expcard_light);
   --border_expcard:var(--border_light);
   --font_color:var(--background_dark);
+  --font_color2:var(--background_lightgrey);
 }
 #dark{
   background-color: var(--background_dark);
@@ -29,6 +31,7 @@
   --background_expcard:var(--background_expcard_dark);
   --border_expcard:var(--border_dark);
   --font_color:var(--background_white);
+  --font_color2:var(--background_lightgrey);
 }
 .Expcard{
     background-color: transparent;
@@ -43,6 +46,7 @@
 .upper{
     width: 100%;
     padding: 24px;
+    height: 114px;
     border-radius: 12px 12px 0px 0px;
     background-color: var(--background_expcard);
 }
@@ -50,15 +54,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 0px;
+    font-weight: 600px;
+    font-size: 1.5rem;
 }
 .upper h4{
     display: flex;
     flex-direction: row;
     justify-content: start;
+    margin: 6px 0px 0px 0px;
+    font-size: 1.125rem;
+    color: var(--font_color2);
 }
 .lower{
     width: 100%;
     padding: 16px 24px 24px;
+}
+.lower p{
+    color: var(--font_color);
 }
 .role{
     display: flex;

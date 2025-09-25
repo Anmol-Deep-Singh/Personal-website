@@ -9,7 +9,7 @@ const projectData = [
 ]
 const experienceData = [
     {
-        positon:"Intern",
+        positon:"Software Engineer",
         date:"20 November",
         link:"https://www.google.com",
         comany:"GMetri",
